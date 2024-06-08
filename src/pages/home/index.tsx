@@ -1,43 +1,44 @@
-import { Search, ShoppingCart, User } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Header } from "@/components/header";
+import { Product, Products } from "./styles";
 
-import { Header } from "./styles";
+import mouseImg from "@/assets/mouse.svg";
+import { ArrowDown, ShoppingCart } from "lucide-react";
 
 export function Home() {
   return (
     <div>
-      <Header>
-        <div>
-          <Link to="/">New<strong>Byte</strong></Link>
+      <Header />
 
-          <div>
-            <input type="text" />
-            <Search />
+      <Products>
+        <section className="products">
+          <strong>Ofertas</strong>
+
+          <div className="products-list">
+            <Product>
+              <span className="discount">
+                <ArrowDown size={12} color="#FFF" /> 55%
+              </span>
+
+              <div className="image">
+                <img src={mouseImg} alt="Mouse" />
+              </div>
+
+              <div className="info">
+                <p>G Pro X Superlight</p>
+
+                <div>
+                  <p>R$ 308,80</p>
+                  <span>R$ 690,00</span>
+                </div>
+              </div>
+
+              <button>
+                <ShoppingCart color="white" size={16}/> Adicionar
+              </button>
+            </Product>
           </div>
-
-          <nav>
-            <button>
-              <ShoppingCart size={14} color="#FFF" />
-            </button>
-            <button>
-              <User size={14} color="#FFF" />
-            </button>
-          </nav>
-        </div>
-      </Header>
-
-      <section>
-        <strong>Ofertas</strong>
-
-        <div>
-          <img src="" alt="" />
-          <div>
-            <p>G Pro X Superlight</p>
-            <p>R$ 308,80</p>
-            <span>R$ 690,00</span>
-          </div>
-        </div>
-      </section>
+        </section>
+      </Products>
     </div>
   );
 }

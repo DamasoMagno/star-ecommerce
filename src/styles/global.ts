@@ -16,4 +16,23 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 1rem;
     }
   }
+
+  body, input, textarea, button {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  [disabled]{
+    cursor: not-allowed;
+    opacity: .75;
+  }
+
+  a {
+    text-decoration: none;
+  }
 `;
