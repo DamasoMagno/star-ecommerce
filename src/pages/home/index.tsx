@@ -1,16 +1,14 @@
 import { Search, ShoppingCart, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import styles from "./styles.module.scss";
+import { Header } from "./styles";
 
 export function Home() {
   return (
     <div>
-      <header className={styles.header}>
+      <Header>
         <div>
-          <Link to="/">
-            New<strong>Byte</strong>
-          </Link>
+          <Link to="/">New<strong>Byte</strong></Link>
 
           <div>
             <input type="text" />
@@ -26,7 +24,7 @@ export function Home() {
             </button>
           </nav>
         </div>
-      </header>
+      </Header>
 
       <section>
         <strong>Ofertas</strong>

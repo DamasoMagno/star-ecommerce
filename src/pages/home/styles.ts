@@ -1,5 +1,7 @@
-.header {
-  border-bottom: 1px solid #2A2A2A;
+import styled from "styled-components";
+
+export const Header = styled.header`
+  border-bottom: 1px solid #2a2a2a;
 
   div {
     display: flex;
@@ -8,20 +10,20 @@
 
     max-width: 1200px;
     margin: 0 auto;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
 
     a {
       text-decoration: none;
-      color: var(--white);
+      color: ${props => props.theme.white};
     }
 
     > div {
       display: flex;
       align-items: center;
-      background-color: rgba(26, 26, 26, .5);
-      border: 1px solid rgba(26, 26, 26, .5);
+      background-color: rgba(26, 26, 26, 0.5);
+      border: 1px solid rgba(26, 26, 26, 0.5);
       border-radius: 8px;
-      padding: .5rem;
+      padding: 0.5rem;
 
       input {
         background-color: transparent;
@@ -30,7 +32,7 @@
       }
 
       svg {
-        color: #FFF;
+        color: #fff;
         width: 1rem;
         height: 1rem;
       }
@@ -48,8 +50,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: .5rem;
+        padding: 0.5rem;
       }
     }
   }
-}
+`;
