@@ -12,7 +12,7 @@ export function Header() {
         </Link>
 
         <div className="search-product">
-          <input type="text" />
+          <input type="text" placeholder="Buscar produtos"/>
           <Search />
         </div>
 
