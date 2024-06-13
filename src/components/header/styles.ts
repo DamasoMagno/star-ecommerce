@@ -24,7 +24,7 @@ export const Container = styled.header`
       }
     }
 
-    .search-product {
+    .search_product {
       display: flex;
       align-items: center;
       width: 100%;

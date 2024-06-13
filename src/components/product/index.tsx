@@ -12,14 +12,17 @@ export function Product() {
         </div>
 
         <div className="info">
-        <span className="discount">
-          <ArrowDown size={12} color="#FFF" /> 55%
-        </span>
-
           <p>G Pro X Superlight</p>
-          <div>
-            <p>R$ 308,80</p>
-            <span>R$ 690,00</span>
+
+          <div className="info_price">
+            <div className="original_price">
+              <span className="price">R$ 690,00</span>
+              <span className="discount">
+                <ArrowDown size={12} color="#FFF" /> 55%
+              </span>
+            </div>
+
+            <span>R$ 308,80</span>
           </div>
         </div>
       </Content>

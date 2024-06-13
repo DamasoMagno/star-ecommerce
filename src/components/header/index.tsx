@@ -11,7 +11,7 @@ export function Header() {
           New<strong>Byte</strong>
         </Link>
 
-        <div className="search-product">
+        <div className="search_product">
           <input type="text" placeholder="Buscar produtos"/>
           <Search />
         </div>

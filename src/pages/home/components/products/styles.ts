@@ -1,10 +1,24 @@
 import styled from "styled-components";
+import { Swiper } from "swiper/react";
+
+export const Container = styled.div`
+  position: relative;
+`
+
+export const Slider = styled(Swiper)`
+  margin: 0 1rem;
+`
 
 export const ButtonsNavigation = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 105%;
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   button {
     display: flex;
@@ -15,6 +29,9 @@ export const ButtonsNavigation = styled.div`
     outline: 0;
     transition: filter 0.25s;
     color: ${(props) => props.theme["white"]};
+    background-color: ${props => props.theme["black"]};
+    border-radius: 100%;
+    padding: .25rem;
     z-index: 0;
 
     &:hover {

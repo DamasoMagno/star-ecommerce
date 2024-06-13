@@ -55,37 +55,45 @@ export const Content = styled(Link)`
     gap: 0.5rem;
     color: ${(props) => props.theme.white};
 
-    .discount {
-      background-color: ${(props) => props.theme["dark-purple"]};
-      color: ${(props) => props.theme["white"]};
-      display: flex;
-      align-items: center;
-      align-self: flex-start;
-      gap: 0.25rem;
-      border-radius: 4px;
-      padding: 0.25rem 0.5rem;
-      font-size: 0.75rem;
-    }
-
     p {
-      font-size: 0.875rem;
+      font-weight: bold;
       color: ${(props) => props.theme.white};
+      font-size: 1.175rem;
     }
 
-    div {
+    .info_price {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       gap: 0.25rem;
 
-      p {
-        font-weight: bold;
-        color: ${(props) => props.theme.white};
-        font-size: 1.175rem;
+      .original_price {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .discount {
+          background-color: ${(props) => props.theme["dark-purple"]};
+          color: ${(props) => props.theme["white"]};
+          display: flex;
+          align-items: center;
+          align-self: flex-start;
+          gap: 0.25rem;
+          border-radius: 4px;
+          padding: 0.25rem 0.4rem;
+          font-size: 0.75rem;
+        }
+
+        .price {
+          color: #676767;
+          font-size: 0.875rem;
+          text-decoration: line-through;
+        }
       }
 
       span {
-        color: #676767;
-        font-size: 0.875rem;
+        color: ${(props) => props.theme.white};
+        font-size: 1.25rem;
+        font-weight: bold;
       }
     }
   }
