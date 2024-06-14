@@ -9,8 +9,8 @@ export function RoutesProvider() {
     <Routes>
       <Route path="/" element={<Default />}>
         <Route path="" element={<Home />} />
+        <Route path="/product/:slug" element={<Product />} />
       </Route>
-      <Route path="/product/:slug" element={<Product />} />
     </Routes>
   );
 }
