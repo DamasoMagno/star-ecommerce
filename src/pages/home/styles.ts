@@ -59,7 +59,7 @@ export const Header = styled.header`
 export const ProductCategory = styled.main`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 
   max-width: 1200px;
   margin: 0.5rem auto;

@@ -12,13 +12,15 @@ import "swiper/css/scrollbar";
 import { ButtonsNavigation, Container, Slider } from "./styles";
 
 export function Products() {
+  const id = crypto.randomUUID()
+
   return (
     <Container>
       <Slider
         modules={[Navigation, A11y, Autoplay]}
         navigation={{
-          prevEl: ".prev",
-          nextEl: ".next",
+          prevEl: `.prev-${id}`,
+          nextEl: `.next-${id}`,
         }}
         loop
         breakpoints={{
@@ -48,10 +50,10 @@ export function Products() {
       </Slider>
 
       <ButtonsNavigation>
-        <button className="prev">
+        <button className={`prev-${id}`}>
           <ChevronLeft />
         </button>
-        <button className="next">
+        <button className={`next-${id}`}>
           <ChevronRight />
         </button>
       </ButtonsNavigation>

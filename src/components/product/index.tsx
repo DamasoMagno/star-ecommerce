@@ -6,7 +6,7 @@ import mouseImg from "@/assets/mouse.svg";
 export function Product() {
   return (
     <Container>
-      <Content to="/">
+      <Content to="/product/oi">
         <div className="image">
           <img src={mouseImg} alt="Mouse" />
         </div>
@@ -16,7 +16,7 @@ export function Product() {
 
           <div className="info_price">
             <div className="original_price">
-              <span className="price">R$ 690,00</span>
+              <span className="price">de: R$ 690,00</span>
               <span className="discount">
                 <ArrowDown size={12} color="#FFF" /> 55%
               </span>

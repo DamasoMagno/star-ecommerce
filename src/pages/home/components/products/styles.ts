@@ -5,15 +5,13 @@ export const Container = styled.div`
   position: relative;
 `
 
-export const Slider = styled(Swiper)`
-  margin: 0 1rem;
-`
+export const Slider = styled(Swiper)``
 
 export const ButtonsNavigation = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 105%;
+  width: 107%;
   position: absolute;
   z-index: 9;
   top: 50%;
