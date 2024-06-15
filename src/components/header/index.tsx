@@ -2,6 +2,7 @@ import { Menu, Search, ShoppingCart, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { Container } from "./styles";
+import { Categories } from "../categories";
 
 export function Header() {
   return (
@@ -12,9 +13,11 @@ export function Header() {
         </Link>
 
         <div className="filter">
-          <button className="menu">
-            <Menu />
-          </button>
+          <Categories>
+            <button className="menu">
+              <Menu />
+            </button>
+          </Categories>
 
           <div className="search_product">
             <input

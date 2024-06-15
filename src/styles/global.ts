@@ -9,7 +9,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: #0b0b0b;
     font-size: 0.875rem;
 
     @media (min-width: 728px) {
@@ -34,5 +33,9 @@ export const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
+  }
+
+  .teste {
+    background-color: #0b0b0b;
   }
 `;
