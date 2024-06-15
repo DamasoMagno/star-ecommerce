@@ -1,18 +1,27 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Container = styled.header`
   border-bottom: 1px solid #2a2a2a;
 
   .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
     max-width: 1200px;
     margin: 0 auto;
     padding: 0.5rem 1rem;
 
+    display: grid;
+    grid-gap: 0.25rem;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-areas:
+      "logo navigation"
+      "search search";
+
+    @media (min-width: 648px) {
+      grid-template-areas: "logo search navigation";
+    }
+
     a {
+      grid-area: logo;
       text-decoration: none;
       font-weight: bold;
       font-size: 1rem;
@@ -24,62 +33,50 @@ export const Container = styled.header`
       }
     }
 
-    .search {
-      button {
-        background-color: rgba(26, 26, 26, 0.5);
-        border: 1px solid rgba(26, 26, 26, 0.5);
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
+    .search_product {
+      grid-area: search;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 400px; 
+      background-color: rgba(26, 26, 26, 0.5);
+      border: 1px solid rgba(26, 26, 26, 0.5);
+      border-radius: 8px;
+      transition: border-color 0.25s, color 0.25s;
+      padding: 0.875rem 1rem;
+      margin: 0.5rem 0;
 
-        svg {
-          width: 1rem;
-          height: 1rem;
-        }
+      input {
+        background-color: transparent;
+        outline: 0;
+        border: 0;
+        color: ${(props) => props.theme["white"]};
+        font-size: 0.875rem;
+        flex: 1;
       }
 
-      .search_product {
-        display: none;
-        align-items: center;
-        width: 100%;
-        max-width: 400px;
-        background-color: rgba(26, 26, 26, 0.5);
-        border: 1px solid rgba(26, 26, 26, 0.5);
-        border-radius: 8px;
-        transition: border-color 0.25s, color 0.25s;
-        padding: 0.875rem 1rem;
+      svg {
+        color: #fff;
+        width: 1rem;
+        height: 1rem;
+      }
 
-        input {
-          background-color: transparent;
-          outline: 0;
-          border: 0;
-          color: ${(props) => props.theme["white"]};
-          font-size: 0.875rem;
-          flex: 1;
-        }
+      &:focus-within {
+        border-color: ${(props) => props.theme["dark-purple"]};
+      }
 
-        svg {
-          color: #fff;
-          width: 1rem;
-          height: 1rem;
-        }
-
-        &:focus-within {
-          border-color: ${(props) => props.theme["dark-purple"]};
-
-          svg {
-            color: ${(props) => props.theme["dark-purple"]};
-          }
-        }
+      @media (min-width: 728px) {
+        margin: 0;
+        flex: 1;        
       }
     }
 
     .navigation {
+      grid-area: navigation;
       display: flex;
       align-items: center;
-      gap: 0.875rem;
+      justify-content: end;
+      gap: 0.5rem;
 
       button {
         background-color: transparent;
@@ -91,94 +88,5 @@ export const Container = styled.header`
         padding: 0.5rem;
       }
     }
-  }
-`;
-
-interface Search {
-  visible: boolean;
-}
-
-export const SearchProduct = styled.div<Search>`
-  svg {
-    color: #fff;
-    width: 1rem;
-    height: 1rem;
-  }
-
-  .search_product {
-    display: none;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-    background-color: rgba(26, 26, 26, 0.5);
-    border: 1px solid rgba(26, 26, 26, 0.5);
-    border-radius: 8px;
-    transition: border-color 0.25s, color 0.25s;
-    padding: 0.875rem 1rem;
-
-    input {
-      background-color: transparent;
-      outline: 0;
-      border: 0;
-      color: ${(props) => props.theme["white"]};
-      font-size: 0.875rem;
-      flex: 1;
-    }
-
-    button {
-      background-color: transparent;
-      border: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: 0.75rem;
-
-      @media (min-width: 728px) {
-        display: none;
-      }
-    }
-
-    &:focus-within {
-      border-color: ${(props) => props.theme["dark-purple"]};
-    }
-  }
-
-  .open_search {
-    background-color: rgba(26, 26, 26, 0.5);
-    border: 1px solid rgba(26, 26, 26, 0.5);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    padding: 0.5rem;
-  }
-
-  @media (min-width: 728px) {
-    .search_product {
-      display: flex;
-    }
-
-    .open_search {
-      display: none;
-    }
-  }
-
-  @media (max-width: 728px) {
-    ${(props) => {
-      if (props.visible) {
-        return css`
-          .search_product {
-            background-color: ${props => props.theme["black"]};
-            display: flex;
-            position: absolute;
-            left: 50%;
-            top: 0%;
-            transform: translate(-50%, 10%);
-            width: 95%;
-          }
-        `;
-      }
-    }}
   }
 `;

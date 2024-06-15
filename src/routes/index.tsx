@@ -14,7 +14,7 @@ export function RoutesProvider() {
       <Route path="/" element={<Default />}>
         <Route path="" element={<Home />} />
         <Route path="/product/:slug" element={<Product />} />
-        <Route path="/category/:category" element={<Category />} />
+        {/* <Route path="/category/:category" element={<Category />} /> */}
       </Route>
     </Routes>
   );
