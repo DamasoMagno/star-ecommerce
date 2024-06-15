@@ -6,17 +6,17 @@ export const Container = styled.header`
   .content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
 
     display: grid;
-    grid-gap: 0.25rem;
-    justify-content: space-between;
+    grid-gap: 0.5rem;
     align-items: center;
+    justify-content: space-between;
     grid-template-areas:
       "logo navigation"
       "search search";
 
-    @media (min-width: 648px) {
+    @media (min-width: 720px) {
       grid-template-areas: "logo search navigation";
     }
 
@@ -38,13 +38,11 @@ export const Container = styled.header`
       display: flex;
       align-items: center;
       width: 100%;
-      max-width: 400px; 
       background-color: rgba(26, 26, 26, 0.5);
       border: 1px solid rgba(26, 26, 26, 0.5);
       border-radius: 8px;
-      transition: border-color 0.25s, color 0.25s;
+      transition: all 0.25s;
       padding: 0.875rem 1rem;
-      margin: 0.5rem 0;
 
       input {
         background-color: transparent;
@@ -66,8 +64,8 @@ export const Container = styled.header`
       }
 
       @media (min-width: 728px) {
-        margin: 0;
-        flex: 1;        
+        margin: 0 auto;
+        width: 400px;
       }
     }
 
