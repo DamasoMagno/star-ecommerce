@@ -1,4 +1,4 @@
-import { Search, ShoppingCart, User } from "lucide-react";
+import { Menu, Search, ShoppingCart, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { Container } from "./styles";
@@ -11,21 +11,27 @@ export function Header() {
           E-<strong>commerce</strong>.
         </Link>
 
-        <div className="search_product">
-          <input
-            type="text"
-            placeholder="Buscar produtos"
-            aria-label="Buscar produtos"
-          />
-          <Search />
+        <div className="filter">
+          <button className="menu">
+            <Menu />
+          </button>
+
+          <div className="search_product">
+            <input
+              type="text"
+              placeholder="Buscar produtos"
+              aria-label="Buscar produtos"
+            />
+            <Search />
+          </div>
         </div>
 
         <nav className="navigation">
           <button aria-label="Carrinho">
-            <ShoppingCart size={14} color="#FFF" />
+            <ShoppingCart />
           </button>
           <button aria-label="Usuário">
-            <User size={14} color="#FFF" />
+            <User />
           </button>
         </nav>
       </div>

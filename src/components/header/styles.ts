@@ -9,7 +9,7 @@ export const Container = styled.header`
     padding: 1rem;
 
     display: grid;
-    grid-gap: 0.5rem;
+    grid-gap: 1rem;
     align-items: center;
     justify-content: space-between;
     grid-template-areas:
@@ -24,7 +24,7 @@ export const Container = styled.header`
       grid-area: logo;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 1.15rem;
       color: ${(props) => props.theme["dark-purple"]};
 
       strong {
@@ -33,39 +33,66 @@ export const Container = styled.header`
       }
     }
 
-    .search_product {
+    .filter {
       grid-area: search;
       display: flex;
       align-items: center;
-      width: 100%;
-      background-color: rgba(26, 26, 26, 0.5);
-      border: 1px solid rgba(26, 26, 26, 0.5);
-      border-radius: 8px;
-      transition: all 0.25s;
-      padding: 0.875rem 1rem;
+      gap: 0.5rem;
 
-      input {
-        background-color: transparent;
-        outline: 0;
+      .menu {
+        display: flex;
+        border-radius: 8px;
+        padding: 0.5rem;
+        align-items: center;
+        justify-content: center;
         border: 0;
-        color: ${(props) => props.theme["white"]};
-        font-size: 0.875rem;
-        flex: 1;
+        background-color: transparent;
+        transition: filter .25s;
+
+        &:hover {
+          filter: brightness(.8);
+        }
+
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+          color: white;
+        }
       }
 
-      svg {
-        color: #fff;
-        width: 1rem;
-        height: 1rem;
-      }
+      .search_product {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: rgba(26, 26, 26, 0.5);
+        border: 1px solid rgba(26, 26, 26, 0.5);
+        border-radius: 8px;
+        transition: all 0.25s;
+        padding: 0.875rem 1rem;
 
-      &:focus-within {
-        border-color: ${(props) => props.theme["dark-purple"]};
-      }
+        input {
+          background-color: transparent;
+          outline: 0;
+          border: 0;
+          color: ${(props) => props.theme["white"]};
+          font-size: 0.875rem;
+          flex: 1;
+        }
 
-      @media (min-width: 728px) {
-        margin: 0 auto;
-        width: 400px;
+        svg {
+          color: #fff;
+          width: 1rem;
+          height: 1rem;
+        }
+
+        &:focus-within {
+          border-color: ${(props) => props.theme["dark-purple"]};
+        }
+
+        @media (min-width: 728px) {
+          margin: 0 auto;
+          width: 400px;
+        }
       }
     }
 
@@ -84,6 +111,12 @@ export const Container = styled.header`
         align-items: center;
         justify-content: center;
         padding: 0.5rem;
+
+        svg {
+          width: 1.15rem;
+          height: 1.15rem;
+          color: ${(props) => props.theme["white"]};
+        }
       }
     }
   }

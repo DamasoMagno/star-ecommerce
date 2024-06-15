@@ -7,6 +7,7 @@ import { Default } from "@/layout/Default";
 import { Home } from "@/pages/home";
 import { Product } from "@/pages/product";
 import { Category } from "@/pages/category";
+import { NotFound } from "@/pages/not-found";
 
 export function RoutesProvider() {
   return (
@@ -16,6 +17,7 @@ export function RoutesProvider() {
         <Route path="/product/:slug" element={<Product />} />
         <Route path="/category/:category" element={<Category />} />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
