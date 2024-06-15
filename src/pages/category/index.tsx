@@ -8,7 +8,7 @@ export function Category() {
       <span>Categoria: <strong>Mouse</strong></span>
 
       <div className="products">
-        {Array.from({ length: 10 }).map((_, i) => (
+        {Array.from({ length: 12 }).map((_, i) => (
           <Product key={i} />
         ))}
       </div>

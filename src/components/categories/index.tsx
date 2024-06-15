@@ -26,11 +26,8 @@ export function Categories({ children }: MenuProps) {
             </div>
 
             <nav className="categories">
-              <Link to="/">Mouses</Link>
-              <Link to="/">Mouses</Link>
-              <Link to="/">Mouses</Link>
-              <Link to="/">Mouses</Link>
-              <Link to="/">Mouses</Link>
+              <Link to="/category/mouse">Mouses</Link>
+              <Link to="/category/teclado">Teclados</Link>
             </nav>
           </div>
         </Content>

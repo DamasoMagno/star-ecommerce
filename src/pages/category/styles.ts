@@ -15,10 +15,10 @@ export const Container = styled.main`
 
   .products {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
 
     @media (min-width: 728px){
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
     }
   }
 `
