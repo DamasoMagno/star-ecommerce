@@ -1,11 +1,12 @@
-
 import { Product } from "@/components/product";
 import { Container } from "./styles";
 
 export function Category() {
   return (
     <Container>
-      <span>Categoria: <strong>Mouse</strong></span>
+      <span>
+        Categoria: <strong>Mouse</strong>
+      </span>
 
       <div className="products">
         {Array.from({ length: 12 }).map((_, i) => (

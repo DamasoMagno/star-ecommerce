@@ -7,6 +7,7 @@ import { RoutesProvider } from "@/routes";
 import { COLORS } from "@/themes";
 
 import { GlobalStyles } from "@/styles/global";
+
 import "@radix-ui/themes/styles.css";
 
 export function App() {

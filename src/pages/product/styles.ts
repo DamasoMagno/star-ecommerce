@@ -10,7 +10,7 @@ export const Container = styled.main`
   margin: 1rem auto;
   padding: 0 1rem;
 
-  @media (min-width: 728px){
+  @media (min-width: 728px) {
     grid-template-columns: 540px 1fr;
   }
 `;
@@ -97,16 +97,16 @@ export const Description = styled.div`
       margin-top: 1rem;
       display: flex;
       flex-direction: column;
-      gap: .5rem;
+      gap: 0.5rem;
 
       span {
-        color: ${props => props.theme["white"]};
-        font-size: .85rem
+        color: ${(props) => props.theme["white"]};
+        font-size: 0.85rem;
       }
 
       p {
         line-height: 1.6;
-        color: ${props => props.theme["white"]};
+        color: ${(props) => props.theme["white"]};
       }
     }
   }

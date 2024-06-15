@@ -37,5 +37,7 @@ export const GlobalStyles = createGlobalStyle`
 
   .teste {
     background-color: #0b0b0b;
+    min-height: 100vh;
+    padding: 0 0 1rem;
   }
 `;

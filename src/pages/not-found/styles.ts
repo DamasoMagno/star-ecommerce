@@ -12,11 +12,11 @@ export const Container = styled.div`
     color: ${(props) => props.theme["white"]};
   }
 
-  a  {
-	display: flex;
-	align-items: center;
-	gap: .25rem;
-	color: ${props => props.theme["white"]};
-	font-size: 1rem;
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: ${(props) => props.theme["white"]};
+    font-size: 1rem;
   }
 `;

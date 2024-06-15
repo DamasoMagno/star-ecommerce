@@ -12,7 +12,7 @@ import "swiper/css/scrollbar";
 import { ButtonsNavigation, Container, Slider } from "./styles";
 
 export function Products() {
-  const id = crypto.randomUUID()
+  const id = crypto.randomUUID();
 
   return (
     <Container>

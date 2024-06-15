@@ -57,7 +57,7 @@ export const Content = styled(Dialog.Content)`
       align-items: center;
       gap: 0.5rem;
       color: white;
-	  padding: 0 .5	rem;
+      padding: 0 0.5 rem;
       font-weight: bold;
     }
 

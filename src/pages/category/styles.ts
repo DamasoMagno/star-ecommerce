@@ -9,7 +9,7 @@ export const Container = styled.main`
   gap: 1rem;
 
   span {
-    color: ${props => props.theme.white};
+    color: ${(props) => props.theme.white};
     font-size: 1.25rem;
   }
 
@@ -17,8 +17,8 @@ export const Container = styled.main`
     display: grid;
     gap: 1.5rem;
 
-    @media (min-width: 728px){
+    @media (min-width: 728px) {
       grid-template-columns: repeat(6, 1fr);
     }
   }
-`
+`;

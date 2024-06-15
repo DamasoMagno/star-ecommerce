@@ -47,10 +47,10 @@ export const Container = styled.header`
         justify-content: center;
         border: 0;
         background-color: transparent;
-        transition: filter .25s;
+        transition: filter 0.25s;
 
         &:hover {
-          filter: brightness(.8);
+          filter: brightness(0.8);
         }
 
         svg {
