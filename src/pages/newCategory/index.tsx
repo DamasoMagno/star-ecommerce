@@ -1,6 +1,6 @@
 
-import { Container } from "./styles";
 import { Product } from "@/components/product";
+import { Container } from "./styles";
 
 export function Category() {
   return (

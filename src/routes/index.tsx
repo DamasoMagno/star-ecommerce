@@ -6,7 +6,7 @@ import { Default } from "@/layout/Default";
 // Pages
 import { Home } from "@/pages/home";
 import { Product } from "@/pages/product";
-// import { Category } from "@/pages/category";
+import { Category } from "@/pages/newCategory";
 
 export function RoutesProvider() {
   return (
@@ -14,7 +14,7 @@ export function RoutesProvider() {
       <Route path="/" element={<Default />}>
         <Route path="" element={<Home />} />
         <Route path="/product/:slug" element={<Product />} />
-        {/* <Route path="/category/:category" element={<Category />} /> */}
+        <Route path="/category/:category" element={<Category />} />
       </Route>
     </Routes>
   );
